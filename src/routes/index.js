@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const apiRoutes = require('./api');
 const viewRoutes = require('./views');
-const { processFormData } = require('../middleware/session-data');
+const { initSessionData, processFormData } = require('../middleware/session-data');
 
 // Add middleware before routes
+router.use(initSessionData);
 router.use(processFormData);
 
 // Mount routes

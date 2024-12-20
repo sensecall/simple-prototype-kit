@@ -10,7 +10,7 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/form-example', (req, res) => {
-  res.render('form-example');
+  res.render('form-examples');
 });
 
 router.post('/form-example', (req, res) => {
