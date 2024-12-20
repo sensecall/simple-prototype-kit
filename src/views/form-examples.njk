@@ -1,0 +1,19 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-12 max-w-3xl">
+    <form method="post">
+        <div class="mb-4">
+            <label for="fish" class="block text-gray-700">Favourite Fish</label>
+            <input type="text" id="fish" name="fish" value="{{ data.fish }}" class="border p-2 w-full">
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Save</button>
+    </form>
+
+    {% if data.fish %}
+    <div class="mt-4">
+        Stored fish: {{ data.fish }}
+    </div>
+    {% endif %}
+</div>
+{% endblock %} 
